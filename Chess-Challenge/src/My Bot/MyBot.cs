@@ -5,6 +5,7 @@ public class MyBot : IChessBot
     public Move Think(Board board, Timer timer)
     {
         Move[] moves = board.GetLegalMoves();
-        return moves[0];
+        System.Random rand = new();
+        return moves[rand.Next(moves.Length)];
     }
 }
